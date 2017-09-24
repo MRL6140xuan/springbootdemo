@@ -1,0 +1,3 @@
+#动态执行配置文件spring:
+  profiles:
+    active: dev

@@ -1,0 +1,16 @@
+#tomcat配置
+server:
+  context-path: /mao
+  port: 8086
+  tomcat:
+    uri-encoding: utf-8
+#   LOGGING
+logging:
+  level:
+    ROOT: info
+  file: mylog.log
+#自定义属性
+my:
+  value: ${random.value}
+  number: ${random.int}
+  uuid: ${random.uuid}
