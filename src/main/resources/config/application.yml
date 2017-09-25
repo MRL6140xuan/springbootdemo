@@ -1,3 +1,13 @@
-#动态执行配置文件spring:
+#    自定义属性
+my:
+  value: "主配置"
+  number: ${random.int}
+  uuid: ${random.int}
+server:
+  port: 8888
+#动态执行配置文件
+spring:
   profiles:
     active: dev
+#  number: ${random.int}
+#  uuid: ${random.int}

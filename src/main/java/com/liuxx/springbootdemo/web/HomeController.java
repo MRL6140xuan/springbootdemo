@@ -1,8 +1,10 @@
 package com.liuxx.springbootdemo.web;
 
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import com.liuxx.springbootdemo.domain.entity.ConfigBean;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
  * Date:2017/9/24 14:19
  */
 @RestController
-@Configuration
-@PropertySource(value = "classpath:application-dev.yml")
+//@Configuration
+//@PropertySource(value = "classpath:config/application-dev.yml")
 @RequestMapping(value = "/home")
+
 public class HomeController {
-    @Value("${my.value}")
-    private String value;
-    private String number;
-    private String uuid;
+    @Autowired
+    private ConfigBean bean;
+
 
     @RequestMapping()
     public String home() {
@@ -35,7 +37,8 @@ public class HomeController {
 
     @GetMapping("/get")
     public String home2() {
-        return "value:"+this.value+"\nnumber:"+this.number+"\nuuid:"+this.uuid;
+//        ConfigBean bean = new ConfigBean();
+        return "value:" + bean.getValue() + "\nnumber:" + bean.getNumber() + "\nuuid:" + bean.getUuid();
     }
 
 

@@ -11,6 +11,6 @@ logging:
   file: mylog.log
 #自定义属性
 my:
-  value: ${random.value}
+  value: "dev配置"
   number: ${random.int}
   uuid: ${random.uuid}
