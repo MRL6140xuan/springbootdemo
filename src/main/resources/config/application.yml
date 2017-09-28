@@ -31,7 +31,12 @@ my:
 spring:
   #mysql
   datasource:
-    url: jdbc:mysql://192.168.64.97:3306/springbootdb
+#    url: jdbc:mysql://192.168.64.97:3306/springbootdb
+    url: jdbc:mysql://127.0.0.1:3306/bootlearn
     username: root
-    password: root
+    password: '033096'
     driver-class-name: com.mysql.jdbc.Driver
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    tomcat:
+      initial-size: 4
+
