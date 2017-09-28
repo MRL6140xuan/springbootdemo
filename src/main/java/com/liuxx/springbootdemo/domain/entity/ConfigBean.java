@@ -14,12 +14,12 @@ import org.springframework.stereotype.Component;
  */
 @Getter
 @Setter
-@Configuration
-@PropertySource(value = "classpath:config/application-dev.yml")
-@ConfigurationProperties(prefix = "my")
+//@Configuration
+//@PropertySource(value = "classpath:config/application-dev.yml")
+//@ConfigurationProperties(prefix = "my")
 @Component
 public class ConfigBean {
     private String value;
     private String number;
-    private int uuid;
+    private String uuid;
 }

@@ -1,6 +1,7 @@
 package com.liuxx.springbootdemo.web;
 
 import com.liuxx.springbootdemo.domain.entity.ConfigBean;
+import com.liuxx.springbootdemo.service.AccountService;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @Autowired
     private ConfigBean bean;
-
 
     @RequestMapping()
     public String home() {

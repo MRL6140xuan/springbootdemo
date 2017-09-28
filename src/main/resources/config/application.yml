@@ -1,13 +1,37 @@
-#    自定义属性
-my:
-  value: "主配置"
-  number: ${random.int}
-  uuid: ${random.int}
-server:
-  port: 8888
-#动态执行配置文件
-spring:
-  profiles:
-    active: dev
+##    自定义属性
+#my:
+#  value: "主配置"
 #  number: ${random.int}
 #  uuid: ${random.int}
+#server:
+#  port: 8888
+##动态执行配置文件
+#spring:
+#  profiles:
+#    active: dev
+##  number: ${random.int}
+##  uuid: ${random.int}
+#tomcat配置
+server:
+  context-path: /dev
+  port: 8086
+  tomcat:
+    uri-encoding: utf-8
+#   LOGGING
+logging:
+  level:
+    ROOT: warn
+  file: dev.log
+#自定义属性
+my:
+  value: "dev配置"
+  number: ${random.int}
+  uuid: ${random.uuid}
+#数据库
+spring:
+  #mysql
+  datasource:
+    url: jdbc:mysql://192.168.64.97:3306/springbootdb
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
