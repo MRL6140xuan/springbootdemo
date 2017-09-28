@@ -24,3 +24,4 @@ nbdist/
 .nb-gradle/
 /mylog.log
 /src/test/
+/dev.log
