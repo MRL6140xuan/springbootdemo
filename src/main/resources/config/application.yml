@@ -31,8 +31,7 @@ my:
 spring:
   #mysql
   datasource:
-#    url: jdbc:mysql://192.168.64.97:3306/springbootdb
-    url: jdbc:mysql://127.0.0.1:3306/bootlearn
+    url: jdbc:mysql://127.0.0.1:3306/springbootdb?characterEncoding=utf8&useSSL=true
     username: root
     password: '033096'
     driver-class-name: com.mysql.jdbc.Driver
