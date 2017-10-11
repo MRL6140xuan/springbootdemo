@@ -36,6 +36,14 @@ spring:
     password: '033096'
     driver-class-name: com.mysql.jdbc.Driver
     type: org.apache.tomcat.jdbc.pool.DataSource
+#    连接池
     tomcat:
       initial-size: 4
-
+# JMS
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 1040993883@qq.com
+    password: AI062295xuan
+    protocol: smtp
+    default-encoding: UTF-8
