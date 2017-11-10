@@ -13,21 +13,24 @@
 ##  uuid: ${random.int}
 #tomcat配置
 server:
-  context-path: /dev
+  context-path: /
   port: 8086
   tomcat:
     uri-encoding: utf-8
+
 #   LOGGING
 logging:
   level:
     ROOT: warn
   file: dev.log
+
 #自定义属性
 my:
   value: "dev配置"
   number: ${random.int}
   uuid: ${random.uuid}
-#数据库
+
+
 spring:
   #mysql
   datasource:
@@ -36,10 +39,15 @@ spring:
     password: '033096'
     driver-class-name: com.mysql.jdbc.Driver
     type: org.apache.tomcat.jdbc.pool.DataSource
-#    连接池
-    tomcat:
+
+    tomcat:   #    连接池
       initial-size: 4
-# JMS
+#  liveReload
+  devtools:
+    livereload:
+      enabled: false
+      port: 54321 #解决LiveReload Server 打不开的问题  可能因为端口被占用的问题
+#  JMS
   mail:
     host: smtp.qq.com
     port: 465
@@ -47,3 +55,13 @@ spring:
     password: AI062295xuan
     protocol: smtp
     default-encoding: UTF-8
+
+#thymeleaf
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html
+    cache: false
+
+
+
