@@ -5,7 +5,8 @@ import lombok.Setter;
 
 /**
  * Description:账户实体类
- * Creator:liuxx
+ *
+ * @author :liuxx
  * Date:2017/9/28 15:33
  */
 @Getter
@@ -14,4 +15,13 @@ public class Account {
     private int id;
     private String name;
     private double money;
+
+    public Account(String name, double money) {
+        this.name = name;
+        this.money = money;
+    }
+
+    public Account() {
+        super();
+    }
 }
